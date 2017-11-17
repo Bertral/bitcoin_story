@@ -1,0 +1,31 @@
+Data from
+https://blockchain.info/fr/charts/hash-rate
+
+Help from
+https://99bitcoins.com/price-chart-history/
+
+11.11.2017
+https://thebitcoin.pub/t/btc-dip-an-recovery-nov-11-13-2017/14179
+
+27.10.2017
+https://www.cryptocoinsnews.com/ethereum-bitcoin-price-decline-major-factors-mid-term-recovery/
+
+26.08.2017
+https://www.cryptocoinsnews.com/bitcoin-dips-4000-first-time-since-august-22-potential-factors-trends/
+
+TODO : trouver des articles sur les progressions de début 2016 et début 2017
+
+(29.11.2013)
+Pic de valeur ($1,242 sur Mt. Gox) peut expliquer la montée en hashrate de 2014
+
+2013
+Hardware de type ASIC dédiés au mining :
+http://ieeexplore.ieee.org/document/8048662/?reload=true
+
+24.06.2011
+Pic dû à un hack d'une base de données et de ventes massives de bitcoins "volés". Puis redescente due à une baisse de confiance.
+http://www.zdnet.com/article/bitcoin-market-flash-crash-and-database-leak-from-mt-gox/
+
+XX.06.2011
+Apparition du premier bitcoin miner FPGA open-source selon : http://ieeexplore.ieee.org/document/8048662/?reload=true
+Plus compétitifs que les GPU.
