@@ -15,8 +15,10 @@ https://www.cryptocoinsnews.com/bitcoin-dips-4000-first-time-since-august-22-pot
 
 TODO : trouver des articles sur les progressions de début 2016 et début 2017
 
-(29.11.2013)
-Pic de valeur ($1,242 sur Mt. Gox) peut expliquer la montée en hashrate de 2014
+
+
+2014
+croissance stable
 
 2013
 Hardware de type ASIC dédiés au mining :
