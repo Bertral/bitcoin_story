@@ -1,3 +1,36 @@
+
+# INTRODUCTION
+
+Le Bitcoin est la première monnaie virtuelle décentralisée. Cela implique qu'elle fonctionne sans autorité administrative ou banque centrale. Elle fut créée en 2009 par une personne ou un groupe inconnu qui publia le projet en open-source avant de disparaître. C'est une crypto-monnaie basée sur le principe de la blockchain. Cette dernière est un journal de transaction partagé par les clients du réseau bitcoin et synchronisé toutes les dix minutes environ.
+
+Comme tout le monde possède un trace des transactions, il faut un moyen de valider leur authenticité afin d'éviter les modifications illicites du journal (blockchain). Cette validation est possible, mais demande un moyen de mettre d'accord la majorité sur un block de transactions. Dans une crypto-monnaie, la majorité est définie comme la puissance de calcul majoritaire. Ici, chaque block de transactions, pour être validé, doit être précédé d'une chaîne de caractères correspondant à certains critères. Cette chaîne est difficile à calculer, et cette difficulté augmente. Pour récompenser les utilisateurs qui valident les transactions, le protocole donne des Bitcoin à chaque personne qui valide un block de transactions. C'est ce qu'on appelle le minage de Bitcoin.
+
+Il est possible de créer un protocole dérivé de Bitcoin basé sur le même historique de transactions. C'est ce qu'on appelle un "fork". Si suffisemment de personnes utilisent cette nouvelle monnaie, le cours du Bitcoin d'origine peut en être négativement impacté.
+
+
+TODO : chercher le effets de bitcoin cash sur le cours et le hashrate à l'announcement et au fork.
+
+
+
+# PARAGRAPHE 1 : zoom sur la tranche 01.10.2017 - 7.11.2017
+
+Le fork Bitcoin Gold sort le 23 octobre 2017, son objectif est d'empêcher la domination de machines de minage spécialisées (ASIC). Les acheteurs de bitcoin deviennent frileux, donc le cours du Bitcoin diminue. Cependant rien de concret ne se passe, comme en témoigne l'historique du nombre de calculs effectués par les mineurs. Cela est dû au fait qu'aucun portefeuille, client ou mineur n'est encore disponible.
+
+
+# PARAGRAPHE 2 : zoom sur la tranche 01.11.2017 - 01.12.2017
+https://www.crypto-france.com/segwit2x-annulation-hard-fork-bitcoin/
+
+Coinbase, après avoir annoncé la création du fork SegWit2x, annule son déploiement. Cela a pour effet de rassurer les utilisateurs. Le Bitcoin atteint alors une valeur record le 8 novembre 2017.
+
+
+# PARAGRAPHE 3 : zoom sur la tranche 01.11.2017 - 01.12.2017
+
+Le week-end du 12 novembre 2017 est marqué par la sortie du client pour le fork Bitcoin Gold. Avant cela, Bitcoin Gold n'avait qu'une valeur théorique, sans portefeuille, client ou mineur. L'arrivée d'un concurrent potentiel effraie les utilisateurs, qui n'osent plus acheter de Bitcoin, et en fait chuter la valeur en USD.
+Il est intéressant de constater que les calculs effectués par les mineurs ont diminué de 50% durant le week-end. La raison semble évidente : les mineurs ne voulant pas être en reste si Bitcoin Gold s'avérait populaire, ont utilisé leurs machines pour miner du Bitcoin Gold dès que possible.
+
+==================================================================================
+==================================================================================
+
 Data from
 https://blockchain.info/fr/charts/hash-rate
 
@@ -6,16 +39,13 @@ https://99bitcoins.com/price-chart-history/
 
 11.11.2017
 https://thebitcoin.pub/t/btc-dip-an-recovery-nov-11-13-2017/14179
+https://www.coindesk.com/bitcoin-gold-release-cryptocurrency-sunday/
 
 27.10.2017
 https://www.cryptocoinsnews.com/ethereum-bitcoin-price-decline-major-factors-mid-term-recovery/
 
 26.08.2017
 https://www.cryptocoinsnews.com/bitcoin-dips-4000-first-time-since-august-22-potential-factors-trends/
-
-TODO : trouver des articles sur les progressions de début 2016 et début 2017
-
-
 
 2014
 croissance stable
