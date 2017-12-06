@@ -6,6 +6,7 @@ const https = require('https');
 const fs = require('fs');
 
 const bpi_url = 'https://api.coindesk.com/v1/bpi/historical/close.json?start=2013-09-01&end=2017-11-26';
+const hashrate_url = 'https://api.blockchain.info/charts/hash-rate?sampled=false&start=2013-09-01&timespan=1547days&format=json';
 
 function download(url) {
   return new Promise((resolve, reject) => {
@@ -26,6 +27,7 @@ gulp.task('download', () => {
     bpi_url + '&currency=CHF',
     bpi_url + '&currency=JPY',
     bpi_url + '&currency=CNY',
+    hashrate_url,
   ];
 
   const files = [
@@ -34,6 +36,7 @@ gulp.task('download', () => {
     'bpi_chf.json',
     'bpi_jpy.json',
     'bpi_cny.json',
+    'hashrate.json',
   ];
 
   for(let i = 0; i < currencies.length; i++) {
