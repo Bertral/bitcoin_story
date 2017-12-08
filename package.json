@@ -11,14 +11,24 @@
   },
   "homepage": "https://github.com/Bertral/bitcoin_story#readme",
   "dependencies": {
-    "d3": "^4.12.0"
+    "d3": "^4.12.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-youtube": "^7.5.0",
+    "recharts": "^1.0.0-beta.6"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "express": "^4.16.2",
     "gulp": "^3.9.1",
     "gulp-webpack": "^1.5.0",
+    "lodash": "^4.17.4",
     "webpack": "^3.9.1"
   }
 }
