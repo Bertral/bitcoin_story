@@ -4,18 +4,8 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-one-page-wonder/blob/master/LICENSE)
  */
 
-body {
-  padding-top: 54px;
-}
-
-@media (min-width: 992px) {
-  body {
-    padding-top: 56px;
-  }
-}
-
 header.masthead {
-  background: url('https://unsplash.it/1900/1080?image=304') no-repeat center center scroll;
+  background: url('../images/5a14872a67731.jpg') no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
