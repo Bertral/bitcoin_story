@@ -23,14 +23,34 @@ class BPIComponent extends React.Component {
     };
   }
 
+  filter(data) {
+    const { first, last } = this.props;
+
+    if (first !== undefined) {
+      data = data.filter((elem) => {
+        const date = new Date(elem.date);
+        return date >= new Date(first);
+      });
+    }
+
+    if (last !== undefined) {
+      data = data.filter((elem) => {
+        const date = new Date(elem.date);
+        return date <= new Date(last);
+      });
+    }
+
+    return data;
+  }
+
   changeCurrency(currency) {
     $.getJSON(`data/bpi_${currency}.json`, (json) => {
-      this.setState({data: json.bpi});
+      this.setState({data: this.filter(json.bpi)});
     });
   }
 
   render() {
-    const { children } = this.props;
+    const { children, width, height, margin } = this.props;
     const { data } = this.state;
 
     return (
@@ -43,7 +63,13 @@ class BPIComponent extends React.Component {
           <button onClick={() => this.changeCurrency('chf')}>CHF</button>
         </div>
 
-        <BPIChart data={data} children={children}/>
+        <BPIChart
+          width={width}
+          height={height}
+          margin={margin}
+          data={this.filter(data)}
+          children={children}
+        />
       </div>
     );
   }
@@ -51,20 +77,10 @@ class BPIComponent extends React.Component {
 
 class BPIChart extends React.Component {
   render() {
-    const { children, data } = this.props;
+    const { children, data, width, height, margin } = this.props;
 
     return (
-      <LineChart
-        width={1000}
-        height={400}
-        data={data}
-        margin={{
-          top: 5,
-          bottom: 5,
-          right: 50,
-          left: 50,
-        }}
-      >
+      <LineChart width={width} height={height} data={data} margin={margin}>
         <CartesianGrid strokeDasharray="3 3"/>
         <XAxis dataKey="date" stroke="#000000"/>
         <YAxis stroke="#000000"/>
@@ -81,14 +97,46 @@ BPIChart.propTypes = {
 };
 
 $.getJSON('data/bpi_usd.json', (json) => {
+  const margin = {
+        top: 5,
+        bottom: 5,
+        right: 50,
+        left: 50,
+  };
+
   ReactDOM.render(
     <BPIComponent
       data={json.bpi}
+      width={1000}
+      height={400}
+      margin={margin}
       children={
         <Brush dataKey="date" className="brush" width={600} height={20} stroke="#d4af37"/>
       }
     />,
     document.getElementById('whole-graph')
+  );
+
+  ReactDOM.render(
+    <BPIComponent
+      data={json.bpi}
+      width={400}
+      height={300}
+      first="2017-06-15"
+      last="2017-08-15"
+    />,
+    document.getElementById('update-graph')
+  );
+
+  ReactDOM.render(
+    <BPIComponent
+      data={json.bpi}
+      width={400}
+      height={300}
+      first="2017-10-8"
+      last="2017-12-8"
+    />,
+    document.getElementById('segwit-graph')
   );
 });
 
@@ -97,14 +145,14 @@ ReactDOM.render(
   videoId={'bBC-nXj3Ng4'}
   opts={{
     height: '480',
-      width: '854',
+    width: '854',
   }}
   />,
   document.getElementById('youtube')
 );
 
 ReactDOM.render(
-  <Carousel showThumbs={false} width={800}>
+  <Carousel showThumbs={false} width="800px">
     <div className="text-white">
       <h4>Hard Forks</h4>
       <img className="mt-5" src="images/en-hard-fork.svg"/>
