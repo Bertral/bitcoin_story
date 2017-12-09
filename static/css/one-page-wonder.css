@@ -5,23 +5,23 @@
  */
 
 header.masthead {
-  background: url('../images/bc_banner.jpg') no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
+    background: url('../images/bc_banner.jpg') no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }
 
 header.masthead>.overlay {
-  padding: 5rem 0;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.6);
+    padding: 5rem 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
 }
 
 @media (min-width: 992px) {
-  header.masthead>.overlay {
-    padding: 10rem 0;
-  }
+    header.masthead>.overlay {
+        padding: 10rem 0;
+    }
 }
 
 .github {
@@ -29,5 +29,36 @@ header.masthead>.overlay {
 }
 
 #whole-graph .recharts-wrapper {
+    margin: 0 auto;
+}
+
+.btn-group button {
+    background-color: #d4af37;
+    border: 1px solid;
+    color: white;
+    padding: 10px 24px;
+    cursor: pointer;
+    float: left;
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none;
+}
+
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.btn-group button:hover {
+    background-color: #cfb53b;
+}
+
+.brush {
+    transform: translateX(100px);
+}
+
+#carousel .carousel {
     margin: 0 auto;
 }

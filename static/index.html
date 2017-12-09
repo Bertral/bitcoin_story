@@ -6,20 +6,21 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Bitcoin - Influences des forks</title>
+        <title>Bitcoin - A fork in the road</title>
 
         <!-- Bootstrap core CSS -->
         <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom styles for this template -->
         <link href="css/one-page-wonder.css" rel="stylesheet">
+        <link href="css/carousel.min.css" rel="stylesheet">
     </head>
     <body>
         <header class="masthead">
             <div class="overlay">
                 <div class="container">
                     <h1 class="display-1 text-white">Bitcoin</h1>
-                    <h2 class="display-4 text-white">Influences des forks</h2>
+                    <h2 class="display-4 text-white">A fork in the road</h2>
                 </div>
             </div>
         </header>
@@ -34,13 +35,14 @@
                     </div>
                     <div class="col-md-6 order-1">
                         <div class="p-5">
-                            <h2 class="display-4">Crypto-monnaie</h2>
+                            <h2 class="display-4">A Cryptocurrency</h2>
                             <p align="justify">
-                            Le Bitcoin est la première monnaie virtuelle décentralisée.
-                            Cela implique qu'elle fonctionne sans autorité administrative ou banque centrale. Elle fut créée en
-                            2009 par une personne ou un groupe inconnu qui publia le projet en open-source avant de disparaître.
-                            C'est une crypto-monnaie basée sur le principe de la blockchain. Cette dernière est un journal de
-                            transaction partagé par les clients du réseau bitcoin et synchronisé toutes les dix minutes environ.
+                            Bitcoin is the world's first decentralized digital currency.
+                            This means bitcoin works without any kind of central bank or administrative system.
+                            <br/>
+                            In 2008, an unknown person or group published a paper describing a digital currency under the name of Satoshi Nakamoto. One year later, a reference implementation was made available as an open source-project by them.
+                            <br/>
+                            Bitcoin works by using a public distributed ledger (called blockchain) that allows clients to place transactions to be recorded by the network. It takes approximately 10 minutes to pass a transaction using the current system.
                             </p>
                         </div>
                     </div>
@@ -58,17 +60,17 @@
                     </div>
                     <div class="col-md-6 order-1">
                         <div class="p-5">
-                            <h2 class="display-4">Minage</h2>
+                            <h2 class="display-4">Mining</h2>
                             <p align="justify">
-                            Comme tout le monde possède un trace des transactions, il faut un moyen de valider leur authenticité
-                            afin d'éviter les modifications illicites du journal (blockchain). Cette validation est possible,
-                            mais demande un moyen de mettre d'accord la majorité sur un bloc de transactions. Dans une crypto-monnaie,
-                            la majorité est définie comme la puissance de calcul majoritaire. Ici, chaque bloc de transactions,
-                            pour être validé, doit être précédé d'une chaîne de caractères correspondant à certains critères
-                            (hash commençant par un certain nombre de zéros). Cette chaîne est difficile à calculer, et le protocole
-                            augmente cette difficulté avec le temps. Pour récompenser les utilisateurs qui valident les transactions,
-                            le protocole donne des Bitcoins à chaque personne qui valide un bloc de transactions.
-                            C'est ce qu'on appelle le minage de Bitcoin.
+                            Because the ledger is public, everybody can pass transactions using it. We then need some way to validate that a transaction is authentic, otherwise people could steal each other's money by lying on the ledger. This is made possible thanks to cryptography and the concept of signatures.
+                            <br/>
+                            But somebody might still be able to lie to somebody else. If I owe you money, I could tell your client that I actually gave it to you but keep this information from the rest of the network. That way, they will believe I still have the same amount of money as before. Hence the idea of the bitcoin challenge.
+                            <br/>
+                            Basically, someone wanting to pass a transaction using the blockchain (our public ledger) needs to do some kind of computation that is actually very costly timewise. They can then add a block to the blockchain that validates a bunch of transactions. A direct consequence of this is that the bigger the computing power used for this task, the harder it is for a single actor to beat them at fullfilling it, simply because a single group or person can hardly possess enough computing power to beat the rest of the world.
+                            <br/>
+                            One more thing, we can make every block in the blockchain linked to the block before it so the state of the next block is dependent on the state of the whole chain. That way, nobody can modify previous blocks without invalidating the rest of the chain. We are now tamper proof!
+                            <br/>
+                            However, we still have a problem. People are not going to spend a bunch of time and energy to pass transactions for free, so we need to reward them. That's where the term "mining" comes from. Everytime somebody validates the challenge and appends a block to the chain, they can add a transaction to give themselves bitcoins out of nowhere! This way they are properly rewarded for spending all of these resources.
                             </p>
                         </div>
                     </div>
@@ -76,9 +78,9 @@
             </div>
         </section>
 
-        <section class="bg-inverse">
+        <section>
             <div class="text-center">
-                <div id="youtube" class="bg-dark py-5"></div>
+                <div id="youtube" class="bg-dark"></div>
             </div>
         </section>
 
@@ -94,14 +96,23 @@
                         <div class="p-5">
                             <h2 class="display-4">Forks</h2>
                             <p align="justify">
-                            Il est possible de créer un protocole dérivé de Bitcoin basé sur le même historique de transactions.
-                            C'est ce qu'on appelle un "fork". Si suffisemment de personnes utilisent cette nouvelle monnaie, le cours
-                            du Bitcoin d'origine peut en être négativement impacté. Ce sont ces impacts qui la suite de ce
-                            document tentera d'illustrer.
+                            Because bitcoin is essentially software, people are going to want to modify it in some way. However, it is unlikely that everybody is on board with every change so sometimes, we get a fork.
+                            <br/>
+                            A fork is basically a divergence in the blockchain due to some changes to the rules of the challenge used to reach consensus. There are two types of forks, hard forks and soft forks.
+                            <br/>
+                            Hark forks happen when the new clients (using the new rules) in the network reject the old ones (or vice-versa). So we essentially have a new currency that shares history with the first one. If everybody upgrades, then we're fine but if people disagree we might get some problems. We don't want people to be able to spend their past money twice after all.
+                            <br/>
+                            Soft forks are kind of like hard forks, except that we do not split the community in two parts hoping that either one changes their mind. We introduce new rules, and try to get a majority of the network to adopt them but still keep a way to be compatible with the protocol before the changes. That way we can easily introduce a new concept in the protocol without breaking everything.
                             </p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="text-center">
+                <div id="carousel" class="bg-dark"></div>
             </div>
         </section>
 

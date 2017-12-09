@@ -79,6 +79,7 @@ gulp.task('download', () => {
 gulp.task('package', () => {
   return gulpwebpack({
     entry: './src/js/main.jsx',
+    cache: true,
     output: {
       filename: 'pack.js',
     },
