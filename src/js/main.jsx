@@ -133,6 +133,7 @@ BPIChart.propTypes = {
 class HashrateChart extends React.Component {
   render() {
     const {
+      brush,
       data,
       width,
       height,
@@ -156,11 +157,15 @@ class HashrateChart extends React.Component {
           dataKey="value"
           fill="#d4af37"
         />
+        { brush &&
+          <Brush dataKey="date" className="brush" width={600} height={20} stroke="#d4af37"/>
+        }
       </BarChart>
     );
   }
 }
 HashrateChart.propTypes = {
+  brush: PropTypes.bool,
   data: PropTypes.array.isRequired,
   width: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired,
@@ -206,6 +211,11 @@ $.getJSON('data/bpi_usd.json', (json) => {
 });
 
 $.getJSON('data/hashrate.json', (json) => {
+  ReactDOM.render(
+    <HashrateChart data={json.values} width={1000} height={400} margin={margin} brush={true}/>,
+    document.getElementById('whole-histogram'),
+  );
+
   ReactDOM.render(
     <HashrateChart
       data={json.values}
