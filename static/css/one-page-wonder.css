@@ -55,6 +55,11 @@ header.masthead>.overlay {
     background-color: #cfb53b;
 }
 
+#update-graph .btn-group,
+#segwit-graph .btn-group {
+    margin-left: 25px;
+}
+
 .brush {
     transform: translateX(100px);
 }

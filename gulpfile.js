@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const webpack = require('webpack');
 const gulpwebpack = require('gulp-webpack');
+const gulpeslint = require('gulp-eslint');
 
 const https = require('https');
 const fs = require('fs');
@@ -72,7 +73,18 @@ gulp.task('download', () => {
   }
 
   download( hashrate_url).then((response) => {
-    save('data/hashrate.json', response);
+    const data = JSON.parse(response);
+    const array = data.values.map((elem) => {
+      const obj = {
+        date: new Date(elem.x * 1000).toISOString().slice(0,10),
+        value: elem.y,
+      };
+
+      return obj;
+    });
+
+    data.values = array;
+    save('data/hashrate.json', JSON.stringify(data));
   });
 });
 
@@ -100,6 +112,13 @@ gulp.task('package', () => {
     },
   }, webpack)
     .pipe(gulp.dest('dist/js'));
+});
+
+gulp.task('lint', () => {
+  return gulp.src(['src/js/*.jsx','!node_modules/**'])
+    .pipe(gulpeslint())
+    .pipe(gulpeslint.format())
+    .pipe(gulpeslint.failAfterError());
 });
 
 gulp.task('express', () => {

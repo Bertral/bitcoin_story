@@ -1,0 +1,9 @@
+{
+  "env": {
+    "mocha": true,
+    "browser": true,
+    "jquery": true
+  },
+  "plugins": ["react"],
+  "extends": ["airbnb-base", "plugin:react/recommended"]
+}
