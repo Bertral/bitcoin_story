@@ -111,7 +111,7 @@ gulp.task('package', () => {
       ],
     },
   }, webpack)
-    .pipe(gulp.dest('doc/js'));
+    .pipe(gulp.dest('docs/js'));
 });
 
 gulp.task('lint', () => {
