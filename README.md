@@ -24,7 +24,9 @@ $ gulp express
 The site will then be available on [http://localhost:8080](http://localhost:8080)
 ## Data sources
 [CoinDesk](https://www.coindesk.com/price/) for the price index.
+
 [Blockchain](https://blockchain.info/en/charts/hash-rate) for the hash rate.
 ## Authors
 [Antoine Friant](https://github.com/Bertral)
+
 [Valentin Finini](https://github.com/Farenjihn)
