@@ -32,6 +32,10 @@ header.masthead>.overlay {
     margin: 0 auto;
 }
 
+#whole-histogram .recharts-wrapper {
+    margin: 0 auto;
+}
+
 .btn-group button {
     background-color: #d4af37;
     border: 1px solid;
