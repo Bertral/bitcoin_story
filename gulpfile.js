@@ -68,7 +68,7 @@ gulp.task('download', () => {
       });
 
       data.bpi = array;
-      save('data/' + files[i], JSON.stringify(data));
+      save('docs/data/' + files[i], JSON.stringify(data));
     });
   }
 
@@ -84,13 +84,13 @@ gulp.task('download', () => {
     });
 
     data.values = array;
-    save('data/hashrate.json', JSON.stringify(data));
+    save('docs/data/hashrate.json', JSON.stringify(data));
   });
 });
 
 gulp.task('package', () => {
   return gulpwebpack({
-    entry: './src/js/main.jsx',
+    entry: './src/jsx/main.jsx',
     cache: true,
     output: {
       filename: 'pack.js',
@@ -111,11 +111,11 @@ gulp.task('package', () => {
       ],
     },
   }, webpack)
-    .pipe(gulp.dest('dist/js'));
+    .pipe(gulp.dest('doc/js'));
 });
 
 gulp.task('lint', () => {
-  return gulp.src(['src/js/*.jsx','!node_modules/**'])
+  return gulp.src(['**/*.jsx','!node_modules/**'])
     .pipe(gulpeslint())
     .pipe(gulpeslint.format())
     .pipe(gulpeslint.failAfterError());
@@ -124,9 +124,6 @@ gulp.task('lint', () => {
 gulp.task('express', () => {
   const app = express();
 
-  app.use(express.static('static'));
-  app.use(express.static('dist'));
-  app.use('/data', express.static('data'));
-
+  app.use(express.static('docs'));
   app.listen(8080);
 });
