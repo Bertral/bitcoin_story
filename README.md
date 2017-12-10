@@ -4,7 +4,7 @@
 This repository hosts the source code for the webpage available [here](https://bertral.github.io/bitcoin_story/).
 
 ## Installation
-To deploy this website, you will need [npm](https://www.npmjs.com/) and [Gulp](https://gulpjs.com/). Simply clone this repository, browse into it's root, and use your command line interface :
+To deploy this website, you will need [npm](https://www.npmjs.com/) and [gulp](https://gulpjs.com/). Simply clone this repository, browse into it's root, and use your command line interface :
 ```
 $ npm install
 ```
